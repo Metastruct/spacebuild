@@ -757,7 +757,6 @@ function ENT:CreateEnvironment(gravity, atmosphere, pressure, temperature, o2, c
 		self.sbenvironment.name = name
 	end
 	self.sbenvironment.air.max = math.Round(100 * 5 * (self:GetVolume()/1000) * self.sbenvironment.atmosphere)
-	self:PrintVars()
 end
 
 function ENT:UpdateSize(oldsize, newsize)
@@ -901,7 +900,6 @@ function ENT:UpdateEnvironment(gravity, atmosphere, pressure, temperature, o2, c
 			self.sbenvironment.air.o2per = o2 - tmp
 		end
 	end
-	self:PrintVars()
 end
 
 function ENT:GetVolume()
